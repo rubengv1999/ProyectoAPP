@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppProyecto.Views.PersonaDetailPage"
+             Visual="Material"
+             Title="Detalle de Persona">
+
+
+    <StackLayout Spacing="20" Padding="15">
+        <StackLayout Spacing="20" >
+            <Frame Padding="16">
+                <StackLayout Spacing="16">
+                    <Label Text="{Binding Persona.Nombre}" 
+                           FontSize="24" />
+
+                    <Entry Text="{Binding Persona.Edad}"  Keyboard="Numeric" Placeholder="Edad" IsReadOnly="True"/>
+
+                    <Editor Text="{Binding Persona.Correo}"  Keyboard="Email" Placeholder="Correo" IsReadOnly="True"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Editar" 
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="{StaticResource PrimaryColor}"
+                        Clicked="Editar_Clicked"/>
+                        <Button Text="Eliminar" 
+                        HorizontalOptions="FillAndExpand" 
+                        Clicked="Eliminar_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+           
+           
+        </StackLayout>
+
+       
+    </StackLayout>
+
+</ContentPage>

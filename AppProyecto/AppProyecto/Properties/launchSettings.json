@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AppProyecto": {
+      "commandName": "Project",
+      "sqlDebugging": false
+    }
+  }
+}
